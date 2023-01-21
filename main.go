@@ -39,13 +39,7 @@ func main() {
 
 	// Set the API endpoint and API key
 	endpoint := "https://api.openai.com/v1/images/generations"
-	// Load the value of apiKey from a local file called token and remove the new line character
-	token, err := os.ReadFile("./secrets/token")
-	token = bytes.TrimSuffix(token, []byte("\n"))
-	if err != nil {
-		log.Fatal(err)
-	}
-	apiKey := string(token)
+	apiKey := loadToken()
 
 	// Create a new instance of the RequestBody struct and set the prompt and size
 	body := RequestBody{Prompt: *prompt, Size: *size, N: 1}
@@ -92,4 +86,21 @@ func main() {
 
 	// Print the URL of the generated image
 	fmt.Println(image.Data[0].URL)
+}
+
+func loadToken() string {
+	apiKey := ""
+	// Load the value of apiKey from the environment variable OPENAI_API_KEY
+	apiKey = os.Getenv("OPENAI_API_KEY")
+	if apiKey != "" {
+		return apiKey
+	}
+	// Load the value of apiKey from a local file called token and remove the new line character
+	token, err := os.ReadFile("./secrets/token")
+	token = bytes.TrimSuffix(token, []byte("\n"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	apiKey = string(token)
+	return apiKey
 }

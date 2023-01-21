@@ -26,6 +26,7 @@ or any other social media!
 touch ./secrets/token
 ```
 - Paste the value of your API key in the `token` file
+- Alternatively, you can set the `OPENAI_API_KEY` environment variable with the value of your API key.
 
 ### If Go is installed locally
 
@@ -70,6 +71,9 @@ defined in your `$PATH` and call it from anywhere in your terminal, or you can a
 to your `$PATH`.
 
 Also, alternatively, you can run `go install` to install the project in your `$GOPATH` and call it from anywhere.
+If you do this, remember to:
+- Add your `$GOPATH` to your `$PATH` if you haven't already.
+- Set the `OPENAI_API_KEY` environment variable with the value of your API key.
 
 # Parameters
 
