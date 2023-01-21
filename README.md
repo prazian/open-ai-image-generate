@@ -69,6 +69,8 @@ Alternatively, you can simply either copy the executable to your /usr/local/bin 
 defined in your `$PATH` and call it from anywhere in your terminal, or you can add the project's directory
 to your `$PATH`.
 
+Also, alternatively, you can run `go install` to install the project in your `$GOPATH` and call it from anywhere.
+
 # Parameters
 
 - `-p` or `--prompt` is the prompt that tells OpenAI what image to generate
