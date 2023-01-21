@@ -1,10 +1,10 @@
 # About
 
-Even though you can use this CLI to generate some fun images and show off in front of your friends and colleagues,
-but this mostly an example to show one of the many potentials in using and integrating with OpenAI!
+Even though you can use this CLI to generate some cool fun images and show off in front of your friends and colleagues,
+but this is mostly an example to show one of the many potentials in using OpenAI and integrating with it!
 
 Using this command, you can easily generate unique cool images in a few seconds and share them on Slack, Twitter, 
-or any other social media!
+or any other social media! 😎
 
 # An example video to show how it works
 
@@ -89,9 +89,9 @@ Based on the OpenAI's [documentation](https://beta.openai.com/docs/api-reference
 
 # Important notes
 
-- Please do not use inappropriate words in the prompt
-- This program is not intended to be used by children
-- Never share your API key with anyone or commit it even to your private repos
+- Please do not use inappropriate words in the prompt.
+- This program is not intended to be used by children.
+- Never share any of your API keys with anyone or commit them even to your private repos!
 
 # License
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.
