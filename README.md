@@ -6,27 +6,6 @@ but this mostly an example to show one of the many potentials in using and integ
 Using this command, you can easily generate unique cool images in a few seconds and share them on Slack, Twitter, 
 or any other social media!
 
-You can even build the project and create an alias on your laptop to call this command from anywhere in your terminal!
-
-```bash
-# 1. Build the project (run it while you are in this path)
-go build -o open-ai-image-generate
-
-# 2.1. You can create an alias like this (if you prefer not to build the project)
-alias 'open_ai_generate_image=docker run -it --rm -v /path/to/cloned/repo:/app -w /app golang:1.16 go run main.go'
-
-# 2.2. You can create an alias like this (if you have also built the project)
-alias 'open_ai_generate_image=/path/to/cloned/repo/open_ai_generate_image'
-
-# 3. Then you can run it like this
-open_ai_generate_image -p "Dancing cat singing in a digital ocean" -s "1024x1024"
-```
-
-Alternatively, you can simply either copy the executable to your /usr/local/bin or /usr/bin or anywhere else 
-defined in your `$PATH` and call it from anywhere in your terminal, or you can add the project's directory 
-to your `$PATH`.
-
-
 # An example video to show how it works
 
 [![An example command to generate random images using OpenAI](https://img.youtube.com/vi/Ep66K0h0n8Y/0.jpg)](https://youtu.be/Ep66K0h0n8Y)
@@ -67,6 +46,28 @@ go run main.go -p "Dancing cat singing in a digital ocean" -s "1024x1024"
 # Example:
 docker run -it --rm -v $(pwd):/app -w /app golang:1.16 go run main.go -p "Dancing cat singing in a digital ocean" -s "1024x1024"
 ```
+
+# How to make it even easier to use
+
+You can even build the project and create an alias on your laptop to call this command from anywhere in your terminal!
+
+```bash
+# 1. Build the project (run it while you are in this path)
+go build -o open-ai-image-generate
+
+# 2.1. You can create an alias like this (if you prefer not to build the project)
+alias 'open_ai_generate_image=docker run -it --rm -v /path/to/cloned/repo:/app -w /app golang:1.16 go run main.go'
+
+# 2.2. You can create an alias like this (if you have also built the project)
+alias 'open_ai_generate_image=/path/to/cloned/repo/open_ai_generate_image'
+
+# 3. Then you can run it like this
+open_ai_generate_image -p "Dancing cat singing in a digital ocean" -s "1024x1024"
+```
+
+Alternatively, you can simply either copy the executable to your /usr/local/bin or /usr/bin or anywhere else
+defined in your `$PATH` and call it from anywhere in your terminal, or you can add the project's directory
+to your `$PATH`.
 
 # Parameters
 
