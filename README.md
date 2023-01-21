@@ -84,3 +84,7 @@ Based on the OpenAI's [documentation](https://beta.openai.com/docs/api-reference
 
 - Please do not use inappropriate words in the prompt
 - This program is not intended to be used by children
+- Never share your API key with anyone or commit it even to your private repos
+
+# License
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.
